@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/semantic.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>lifestyle Survey</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="ui massive menu">
+        <div class="ui container">
+            <div class="header item">
+                <a href="/" class="link">Lifestyle Survey</a>
+            </div>
+            <a href="about" class="item">
+                About Me
+            </a>
+        </div>
+    </div>
+
+    <div class="ui container">
+        <h2 class="center">Please take our survey</h2>
+
+        <form class="ui form blue" action="/add" method="post">
+            <div class="field">
+                <label>Surname</label>
+                <input type="text" name="surname" placeholder="Surname" required>
+            </div>
+            <div class="field">
+                <label>First Names</label>
+                <input type="text" name="firstNames" placeholder="First Names" required>
+            </div>
+            <div class="field">
+                <label>Contact Number</label>
+                <input type="tel" name="contactNumber" placeholder="Contact Number" required>
+            </div>
+            <div class="field">
+                <label for="date">Date</label>
+                <input type="date" name="date">
+            </div>
+            <div class="field">
+                <label for="age">Age</label>
+                <input type="number" name="age" placeholder="Age" required>
+            </div>
+
+            <br>
+
+            <div class="field">
+                <p>What is your favourite food? (You can choose more than 1 answer)</p>
+                <div class="ui form">
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="pizza">
+                            <label>Pizza</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="pasta">
+                            <label>Pasta</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="pap">
+                            <label>Pap and Wors</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="chicken">
+                            <label>Chicken stir fry</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="beef">
+                            <label>Beef stir fry</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="other">
+                            <label>Other</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="ui form">
+                <p>On a scale of 1 to 5, indicate how you feel about the following:</p>
+
+                <table class="ui celled structured table">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th class="center aligned">Strongly Agree</th>
+                        <th class="center aligned">Agree</th>
+                        <th class="center aligned">Neutral</th>
+                        <th class="center aligned">Disagree</th>
+                        <th class="center aligned">Strongly disagree</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th class="center aligned">(1)</th>
+                        <th class="center aligned">(2)</th>
+                        <th class="center aligned">(3)</th>
+                        <th class="center aligned">(4)</th>
+                        <th class="center aligned">(5)</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <div class="inline fields">
+                        <tr>
+                            <td><label for="eatOut">I like to eat out</label></td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="eatOut" value="1">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="eatOut" value="2">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="eatOut" value="3">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="eatOut" value="4">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="eatOut" value="5">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </div>
+
+                    <div class="inline fields">
+                        <tr>
+                            <td><label for="movies">I like to watch movies</label></td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="movies" value="1">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="movies" value="2">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="movies" value="3">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="movies" value="4">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="movies" value="5">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </div>
+
+                    <div class="inline fields">
+                        <tr>
+                            <td><label for="tv">I like to watch TV</label></td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="tv" value="1">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="tv" value="2">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="tv" value="3">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="tv" value="4">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="tv" value="5">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </div>
+
+                    <div class="inline fields">
+                        <tr>
+                            <td><label for="radio">I like to listen to the radio</label></td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="radio" value="1">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="radio" value="2">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="radio" value="3">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="radio" value="4">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center aligned">
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="radio" value="5">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </div>
+                    </tbody>
+                </table>
+            </div>
+
+            <br><br>
+
+            <div class="ui fluid field">
+                <input type="submit" value="submit" class="ui button blue">
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+<script src="/public/js/semantic.min.js"></script>
+</body>
+</html>

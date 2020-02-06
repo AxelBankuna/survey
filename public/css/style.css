@@ -1,0 +1,33 @@
+.wrapper{
+    width: 100%;
+    /*height: 100%;*/
+    /*background-image: url("/img/background.jpg");*/
+    background-color: #bababc;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+
+/*tr {*/
+/*    border: 1px solid black;*/
+/*}*/
+
+td{
+    align-content: center;
+}
+
+.ok{
+    text-align: center;
+}
+
+.container{
+    padding-bottom: 20px;
+}
+
+h2 {
+    height: 90%;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}

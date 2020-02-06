@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/semantic.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>lifestyle Survey</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="ui massive menu">
+        <div class="ui container">
+            <div class="header item">
+                <a href="/" class="link">Lifestyle Survey</a>
+            </div>
+            <a href="about" class="item">
+                About Me
+            </a>
+        </div>
+    </div>
+
+    <div class="ui container">
+        <table class="ui compact celled definition table">
+            <tbody>
+            <tr>
+                <td>Total number of surveys:</td>
+                <td><%- surveys.length %></td>
+            </tr>
+            <tr>
+                <td>Average age:</td>
+                <% let avg = 0; surveys.forEach((data)=>{ avg += data.age; %>
+                <% }); %>
+                <td><%- avg / surveys.length %></td>
+            </tr>
+            <tr>
+                <td>Oldest person who participated in survey:</td>
+                <% let old = 0; surveys.forEach((data)=>{ if (old < data.age) {
+                    old = data.age
+                }; %>
+                <% }); %>
+                <td><%- old %></td>
+            </tr>
+            <tr>
+                <td>Youngest person who participated in survey:</td>
+                <% let young = 0; surveys.forEach((data)=>{ if (young < data.age) {
+                    young = data.age;
+                } %>
+                <% }); %>
+                <td><%- young %></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Percentage of people who like Pizza:</td>
+                <% let pizz = 0; surveys.forEach((data)=>{ if (data.pizza === "on") {
+                    pizz++;
+                } %>
+                <% }); pizz = (pizz / surveys.length) * 100; %>
+                <td><%- pizz %> %</td>
+            </tr>
+            <tr>
+                <td>Percentage of people who like Pasta:</td>
+                <% let past = 0; surveys.forEach((data)=>{ if (data.pasta === "on") {
+                    past++;
+                } %>
+                <% }); past = (past / surveys.length) * 100; %>
+                <td><%- past %> %</td>
+
+            </tr>
+            <tr>
+                <td>Percentage of people who like Pap and Wors:</td>
+                <% let pwors = 0; surveys.forEach((data)=>{ if (data.pap === "on") {
+                    pwors++;
+                } %>
+                <% }); pwors = (pwors / surveys.length) * 100; %>
+                <td><%- pwors %> %</td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>People who like to eat out:</td>
+                <% let eat = 0; surveys.forEach((data)=>{eat += parseInt(data.eatOut); %>
+                <% }); eat = (eat / (surveys.length * 5)) * 100; %>
+                <td><%- eat %> %</td>
+            </tr>
+            <tr>
+                <td>People who like to watch movies:</td>
+                <% let mov = 0; surveys.forEach((data)=>{mov += parseInt(data.movies); %>
+                <% }); mov = (mov / (surveys.length * 5)) * 100; %>
+                <td><%- mov %> %</td>
+            </tr>
+            <tr>
+                <td>People who like to watch TV:</td>
+                <% let tele = 0; surveys.forEach((data)=>{tele += parseInt(data.tv); %>
+                <% }); tele = (tele / (surveys.length * 5)) * 100; %>
+                <td><%- tele %> %</td>
+            </tr>
+            <tr>
+                <td>People who like to listen to radio:</td>
+                <% let rad = 0; surveys.forEach((data)=>{rad += parseInt(data.radio); %>
+                <% }); rad = (rad / (surveys.length * 5)) * 100; %>
+                <td><%- rad %> %</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="center aligned">
+                    <a href="/">
+                        <div class="ok ui massive primary labeled icon button">
+                            OK
+                        </div>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="/public/js/semantic.min.js"></script>
+</body>
+</html>
