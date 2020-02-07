@@ -1,6 +1,4 @@
 const express = require('express');
-// const keys = require("./models/keys");
-// const survey = require("./models/survey");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
@@ -8,7 +6,7 @@ const app = express();
 
 
 const port = 8000;
-mongoose.connect("mongodb://localhost:27017/surveyDB", {useNewUrlParser: true});
+mongoose.connect("mongodb://localhost:27017/surveyDB", {useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 db.on("error", () => console.log("Database connection error."));
 db.once("open", () => {
