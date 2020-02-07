@@ -4,9 +4,10 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+const port = process.env.PORT || 8000;
+let uri = process.env.MONGODB_URI || "mongodb://localhost:27017/surveyDB";
 
-const port = 8000;
-mongoose.connect("mongodb://localhost:27017/surveyDB", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 db.on("error", () => console.log("Database connection error."));
 db.once("open", () => {
