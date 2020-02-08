@@ -45,7 +45,7 @@
             </tr>
             <tr>
                 <td>Youngest person who participated in survey:</td>
-                <% let young = 0; surveys.forEach((data)=>{ if (young < data.age) {
+                <% let young = 0; surveys.forEach((data)=>{ if (young > data.age) {
                     young = data.age;
                 } %>
                 <% }); %>
